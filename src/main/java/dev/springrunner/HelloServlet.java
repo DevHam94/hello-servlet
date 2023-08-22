@@ -13,6 +13,9 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
         // 1. 요청 데이터로부터 이름정보를 꺼내는 것
         String requestName = request.getParameter("name");
         // 2. 실행하는 서블릿에 이름정보를 찾는 것
